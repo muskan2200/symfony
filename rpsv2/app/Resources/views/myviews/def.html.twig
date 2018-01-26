@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Rock--Paper--Scissor
+</title>
+</head>
+<body>
+
+<h2><center><b>Rock--Paper--Scissor</b></center></h1>
+ 
+  {% block button %}
+  <a href="{{ path('playgame', {'id': 0}) }}">
+  <button type="button" value=" New Game" name="New Game" >
+ New Game </button>   </a>
+
+
+<form name="first" method="get" action="{{ path('playgame')}}">
+  <br> <br>
+    
+         or Select <select name="list1">
+        {% for gm in game_doct %}
+            <option value="{{gm.id}}">game:- {{gm.id}}</option>
+        {% endfor %}
+        </select>
+        <br> 
+        <br> <br> <br>
+         <input type="submit" value="Watch" name="watch" > 
+           &nbsp;&nbsp; &nbsp;&nbsp;
+   <input type="submit" value="Play" name="play" >
+    </form>
+    {% endblock %}
+
+
+</body>
+</html>

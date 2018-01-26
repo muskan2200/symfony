@@ -1,0 +1,40 @@
+    <html>
+    <body>
+    {% block body %}
+      <h1> you choose 
+       {% if player_choice == 'Paper' %}
+      <image src="{{asset('p.png')}}" alt="Paper" /> 
+       {% elseif player_choice == 'Rock' %}
+      <image src="{{asset('r.png')}}" alt="Rock" /> 
+        {% elseif player_choice == 'Scissors' %}
+      <image src="{{asset('s.png')}}" alt="Rock" />
+        {% endif %}
+        </h1>  <br/> <br/> <br/>
+  <h1> computer choose 
+   {% if computer_choice == 'Paper' %}
+    <image src="{{asset('p.png')}}" alt="Paper" /> 
+    {% elseif computer_choice == 'Rock' %}
+    <image src="{{asset('r.png')}}" alt="Rock" /> 
+      {% elseif computer_choice == 'Scissors' %}
+      <image src="{{asset('s.png')}}" alt="Rock" />
+        {% endif %}
+       </h1>   <br/> <br/> <br/>
+
+
+       {% endblock %}
+
+  <h1> Result :- {{result}} </h1>
+  <h1> player score :- {{userscore}} </h1>
+  <h1> computer score :- {{compscore}} </h1>
+
+   <a href="{{path('homepage')}}">
+ <button type="button" Value="quit"> Quit     </button>   </a>
+     &nbsp;&nbsp; &nbsp;&nbsp; 
+   <a href="./play?id=id ">
+ <button type="button" Value="try"> Try again  </button>   </a>
+
+ </body>
+ </html>
+
+ 
+   
